@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace GoFPatterns.Shared {
-    public class DemoProxy {
+    public class DemoProxy : IOperation {
 
         private IGoFPatternDemo demo;
 
@@ -11,7 +11,7 @@ namespace GoFPatterns.Shared {
             this.demo = demo;
         }
 
-        public void Run() {
+        public void Execute() {
             Console.WriteLine($"Running {demo.GetType()}");
             demo.Run();
             Console.WriteLine();

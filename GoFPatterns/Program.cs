@@ -1,4 +1,5 @@
-﻿using GoFPatterns.Decorator;
+﻿using GoFPatterns.Command;
+using GoFPatterns.Decorator;
 using GoFPatterns.Facade;
 using GoFPatterns.Factory;
 using GoFPatterns.Prototype;
@@ -13,17 +14,17 @@ namespace GoFPatterns
     class Program
     {
         static void Main(string[] args) {
-            List<DemoProxy> demos = new List<DemoProxy>();
-            demos.Add(new DemoProxy(new SingletonPatternDemo()));
-            demos.Add(new DemoProxy(new FactoryPatternDemo()));
-            demos.Add(new DemoProxy(new AbstractFactory.BadExample.AbstractFactoryDemo()));
-            demos.Add(new DemoProxy(new AbstractFactory.GoodExample.AbstractFactoryDemo()));
-            demos.Add(new DemoProxy(new PrototypeDemo()));
-            demos.Add(new DemoProxy(new FacadeDemo()));
-            demos.Add(new DemoProxy(new ProxyDemo()));
-            demos.Add(new DemoProxy(new DecoratorDemo()));
+            Invoker demosInvoker = new Invoker();
+            demosInvoker.AddOperation(new DemoProxy(new SingletonPatternDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new AbstractFactory.BadExample.AbstractFactoryDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new AbstractFactory.GoodExample.AbstractFactoryDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new PrototypeDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new FacadeDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new ProxyDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new DecoratorDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new CommandDemo()));
 
-            demos.ForEach(demo => demo.Run());
+            demosInvoker.ExecuteAllOperations();
         }
     }
 }
