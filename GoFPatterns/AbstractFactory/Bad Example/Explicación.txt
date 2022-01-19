@@ -1,0 +1,2 @@
+﻿Viola el principio de Segregación de interfaces (por definir una interfaz que define dos comportamientos distintos) y 
+el de Sustitución de Liskov (porque no se pueden tratar independientemente las instancias, a una se le debe llamar el GetRest y a la otra GetBD).

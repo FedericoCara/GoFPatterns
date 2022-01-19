@@ -4,9 +4,9 @@ using System.Text;
 
 namespace GoFPatterns.Singleton
 {
-    public class SingletonPatternDemo
-    {
-        public static void Run() {
+    public class SingletonPatternDemo : GoFPatternDemo {
+
+        protected override void OnRun() {
             Connection connection = Connection.Instance;
             connection.Connect();
             connection.Disconnect();
