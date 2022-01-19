@@ -1,10 +1,11 @@
+using GoFPatterns.Shared;
 using System;
 
 namespace GoFPatterns.AbstractFactory.BadExample {
 
-	public class AbstractFactoryDemo : GoFPatternDemo {
+	public class AbstractFactoryDemo : IGoFPatternDemo {
 
-        protected override void OnRun() {
+        public void Run() {
 			AbstractFactory dbFactory = ProducerFactory.GetFactory(FactoryType.DB);
 			IDBConnection cxBD1 = dbFactory.GetBD(DBConnectionType.MYSQL);
 

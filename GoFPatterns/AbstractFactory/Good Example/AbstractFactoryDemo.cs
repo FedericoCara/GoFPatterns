@@ -1,11 +1,12 @@
-﻿using System;
+﻿using GoFPatterns.Shared;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GoFPatterns.AbstractFactory.GoodExample {
-    public class AbstractFactoryDemo : GoFPatternDemo{
+    public class AbstractFactoryDemo : IGoFPatternDemo{
 
-        protected override void OnRun() {
+        public void Run() {
             List<IFurnitureFactory> furnitureFactories = new List<IFurnitureFactory>{ 
                 new ModernFurnitureFactory(),
                 new VictorianFurnitureFactory() 

@@ -1,12 +1,13 @@
-﻿using System;
+﻿using GoFPatterns.Shared;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GoFPatterns.Singleton
 {
-    public class SingletonPatternDemo : GoFPatternDemo {
+    public class SingletonPatternDemo : IGoFPatternDemo {
 
-        protected override void OnRun() {
+        public void Run() {
             Connection connection = Connection.Instance;
             connection.Connect();
             connection.Disconnect();

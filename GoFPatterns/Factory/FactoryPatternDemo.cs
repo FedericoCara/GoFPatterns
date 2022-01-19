@@ -1,9 +1,11 @@
+using GoFPatterns.Shared;
+
 namespace GoFPatterns.Factory {
 
-    public class FactoryPatternDemo : GoFPatternDemo
+    public class FactoryPatternDemo : IGoFPatternDemo
     {
 
-        protected override void OnRun() {
+        public void Run() {
 			ConnectionFactory fabrica = new ConnectionFactory();
 
 			IConnection cx1 = fabrica.GetConnection(DBConnectionType.ORACLE);
