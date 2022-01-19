@@ -1,4 +1,5 @@
-﻿using GoFPatterns.Factory;
+﻿using GoFPatterns.Facade;
+using GoFPatterns.Factory;
 using GoFPatterns.Prototype;
 using GoFPatterns.Shared;
 using GoFPatterns.Singleton;
@@ -16,6 +17,7 @@ namespace GoFPatterns
             demos.Add(new DemoProxy(new AbstractFactory.BadExample.AbstractFactoryDemo()));
             demos.Add(new DemoProxy(new AbstractFactory.GoodExample.AbstractFactoryDemo()));
             demos.Add(new DemoProxy(new PrototypeDemo()));
+            demos.Add(new DemoProxy(new FacadeDemo()));
 
             demos.ForEach(demo => demo.Run());
         }
