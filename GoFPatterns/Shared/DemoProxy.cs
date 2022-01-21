@@ -15,6 +15,8 @@ namespace GoFPatterns.Shared {
             Console.WriteLine($"Running {demo.GetType()}");
             demo.Run();
             Console.WriteLine();
+            Console.WriteLine("////////////////////////////////");
+            Console.WriteLine();
         }
 
     }

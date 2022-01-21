@@ -8,6 +8,7 @@ using GoFPatterns.Prototype;
 using GoFPatterns.Proxy;
 using GoFPatterns.Shared;
 using GoFPatterns.Singleton;
+using GoFPatterns.Strategy;
 using System;
 using System.Collections.Generic;
 
@@ -27,6 +28,7 @@ namespace GoFPatterns
             demosInvoker.AddOperation(new DemoProxy(new CommandDemo()));
             demosInvoker.AddOperation(new DemoProxy(new MementoDemo()));
             demosInvoker.AddOperation(new DemoProxy(new ObserverDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new StrategyDemo()));
 
             demosInvoker.ExecuteAllOperations();
         }
