@@ -1,7 +1,10 @@
 using GoFPatterns.Shared;
 
-namespace GoFPatterns.DAO {
+namespace GoFPatterns.DependencyInjection {
 	public interface IPersonDAO : ICRUD<Person> {
+
 		void ShowNames();
+		void SetConnection(IConnection connection);
+
 	}
 }

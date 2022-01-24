@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace GoFPatterns.DAO {
+namespace GoFPatterns.Shared {
 	public interface ICRUD<T> {
 
 		List<T> ListAll();

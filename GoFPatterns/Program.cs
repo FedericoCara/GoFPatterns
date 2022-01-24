@@ -1,6 +1,7 @@
 ﻿using GoFPatterns.Command;
 using GoFPatterns.DAO;
 using GoFPatterns.Decorator;
+using GoFPatterns.DependencyInjection;
 using GoFPatterns.Facade;
 using GoFPatterns.Factory;
 using GoFPatterns.Memento;
@@ -31,6 +32,7 @@ namespace GoFPatterns
             demosInvoker.AddOperation(new DemoProxy(new ObserverDemo()));
             demosInvoker.AddOperation(new DemoProxy(new StrategyDemo()));
             demosInvoker.AddOperation(new DemoProxy(new DAODemo()));
+            demosInvoker.AddOperation(new DemoProxy(new DependencyInjectionDemo()));
 
             demosInvoker.ExecuteAllOperations();
         }
