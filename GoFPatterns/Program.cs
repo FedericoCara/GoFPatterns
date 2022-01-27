@@ -1,4 +1,5 @@
-﻿using GoFPatterns.Command;
+﻿using GoFPatterns.ChainOfResponsability;
+using GoFPatterns.Command;
 using GoFPatterns.Composite;
 using GoFPatterns.DAO;
 using GoFPatterns.Decorator;
@@ -39,6 +40,7 @@ namespace GoFPatterns
             demosInvoker.AddOperation(new DemoProxy(new CompositeDemo()));
             demosInvoker.AddOperation(new DemoProxy(new StateDemo()));
             demosInvoker.AddOperation(new DemoProxy(new VisitorDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new ChainOfResponsabilityDemo()));
 
             demosInvoker.ExecuteAllOperations();
         }
