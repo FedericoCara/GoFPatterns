@@ -14,6 +14,7 @@ using GoFPatterns.Shared;
 using GoFPatterns.Singleton;
 using GoFPatterns.State;
 using GoFPatterns.Strategy;
+using GoFPatterns.TemplateMethod;
 using GoFPatterns.Visitor;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,7 @@ namespace GoFPatterns
             demosInvoker.AddOperation(new DemoProxy(new StateDemo()));
             demosInvoker.AddOperation(new DemoProxy(new VisitorDemo()));
             demosInvoker.AddOperation(new DemoProxy(new ChainOfResponsabilityDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new TemplateMethodDemo()));
 
             demosInvoker.ExecuteAllOperations();
         }

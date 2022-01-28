@@ -5,9 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoFPatterns.Visitor
-{
-    public class VisitorDemo : IGoFPatternDemo { 
+namespace GoFPatterns.Visitor {
+    public class VisitorDemo : IGoFPatternDemo {
 
         public void Run() {
             IVisitor visitor2 = new SpecificVisitor2();
