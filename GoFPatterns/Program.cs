@@ -6,6 +6,7 @@ using GoFPatterns.Decorator;
 using GoFPatterns.DependencyInjection;
 using GoFPatterns.Facade;
 using GoFPatterns.Factory;
+using GoFPatterns.Interpreter;
 using GoFPatterns.Memento;
 using GoFPatterns.Observer;
 using GoFPatterns.Prototype;
@@ -43,6 +44,7 @@ namespace GoFPatterns
             demosInvoker.AddOperation(new DemoProxy(new VisitorDemo()));
             demosInvoker.AddOperation(new DemoProxy(new ChainOfResponsabilityDemo()));
             demosInvoker.AddOperation(new DemoProxy(new TemplateMethodDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new InterpreterDemo()));
 
             demosInvoker.ExecuteAllOperations();
         }
