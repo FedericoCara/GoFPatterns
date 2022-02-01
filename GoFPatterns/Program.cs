@@ -1,4 +1,5 @@
-﻿using GoFPatterns.ChainOfResponsability;
+﻿using GoFPatterns.Bridge;
+using GoFPatterns.ChainOfResponsability;
 using GoFPatterns.Command;
 using GoFPatterns.Composite;
 using GoFPatterns.DAO;
@@ -45,6 +46,7 @@ namespace GoFPatterns
             demosInvoker.AddOperation(new DemoProxy(new ChainOfResponsabilityDemo()));
             demosInvoker.AddOperation(new DemoProxy(new TemplateMethodDemo()));
             demosInvoker.AddOperation(new DemoProxy(new InterpreterDemo()));
+            demosInvoker.AddOperation(new DemoProxy(new BridgeDemo()));
 
             demosInvoker.ExecuteAllOperations();
         }
